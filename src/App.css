@@ -1,38 +1,110 @@
-.App {
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f0f2f5;
+  overflow: hidden;
+}
+
+.left-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: url('/public/BG.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.left-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Lớp overlay tối màu */
+  z-index: 1;
+}
+
+.left-panel > div {
+  position: relative;
+  z-index: 2;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.left-panel .ant-typography {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.network-graphic {
+  max-width: auto;
+  height: auto;
+  margin-bottom: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  padding: 64px;
+  text-align: center; /* Căn giữa tất cả text trong right-panel */
+}
+
+.login-form-container {
+  max-width: 500px;
+  width: 300%;
+  margin: 0 auto;
+}
+
+/* Typography styles */
+.right-panel .ant-typography {
+  margin-bottom: 8px;
+}
+
+.right-panel .ant-typography + .ant-typography {
+  margin-bottom: 32px;
+}
+
+/* Form styles */
+.ant-form.ant-form-vertical {
+  width: 100%;
+}
+
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+.ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Input styles */
+.ant-input-affix-wrapper {
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.ant-input-affix-wrapper .anticon {
+  color: #bfbfbf;
+}
+
+/* Button styles */
+.login-form-button {
+  height: 48px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .right-panel {
+    padding: 32px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .login-form-container {
+    max-width: 100%;
   }
 }

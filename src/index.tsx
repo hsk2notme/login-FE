@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Import các thư viện React cần thiết
+import React from "react";
+import ReactDOM from "react-dom/client";
+// Import styles
+import "./index.css";
+// Import component Login từ App.js
+import App from "./App.js";
+// Import utility đo hiệu năng
+import reportWebVitals from "./reportWebVitals";
 
+// Khởi tạo root của ứng dụng React
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
@@ -13,7 +18,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
